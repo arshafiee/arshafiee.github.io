@@ -4,6 +4,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+  ul ul {
+  border-left: 5px solid lightskyblue;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 10px 20px;
+}
+</style>
 <body>
 
 <script>
@@ -31,7 +39,7 @@ function w3_close() {
   <a href="#" class="w3-bar-item w3-button w3-hover-text-blue w3-text-blue">Work</a>
   <a href="about.html" class="w3-bar-item w3-button w3-hover-text-blue">About</a>
   <a href="contact.html" class="w3-bar-item w3-button w3-hover-text-blue" style="margin-bottom: 100px;">Contact</a>
-    <a href="https://www.linkedin.com/in/armin-shafiee-sarvestani-01b76a190/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.linkedin.com/in/armin-shafiee-01b76a190/" target="_blank"><i class="fa fa-linkedin"></i></a>
     <a href="https://github.com/arshafiee" target="_blank"><i class="fa fa-github"></i></a>
     <a href="mailto:arminshafiee7712@yahoo.com" target="_blank"><i class="fa fa-envelope"></i></a>
     <a href="index.html"><i class="fa fa-globe"></i></a> 
@@ -44,15 +52,114 @@ function w3_close() {
   <div class="w3-row" style="margin-bottom: 50px;">
     <div class="w3-bar w3-card-2 w3-blue">
       <button class="w3-button w3-hide-large w3-right w3-hover-lime w3-hover-text-blue" onclick="w3_open()">&#9776;</button>
-      <a href="#TOP" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Top</a>
-      <a href="#RI" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Research Interests</a>
-      <a href="#EDUCATION" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Education</a> 
+      <a href="#RE" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Research Experiences</a>
+      <a href="#SP" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Selected Projects</a> 
+      <a href="#TE" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Teaching Experiences</a>
     </div>
   </div>
 
-  <div class="w3-container w3-blue w3-center">
-    <h3>Under Construction</h3>
+  <div class="w3-container" id="TOP"> 
+    <p>To take a look at the full record of my works, you can have my <a href="" target="_blank" class="w3-text-blue" style="text-decoration: none; pointer-events: none;">CV</a> here.</p>
+    <hr>
+  </div>
+
+
+  <div class="w3-container" id="RE"> 
+    <div class="w3-panel w3-leftbar w3-border-blue w3-opacity">
+      <h2 class="w3-text-blue">RESEARCH EXPERIENCES</h2>
+    </div>
+      <ul>
+        <li>
+          <p><b><a href="http://ee.sharif.edu/~msl/" target="_blank" class="w3-hover-text-blue" style="text-decoration: none;">Multimedia and Signal Processing Lab</a> | Department of Electrical Engineering</b></p>
+          <span style="opacity: 0.4">Research Assistant Supervised by </span>
+          <a href="http://sharif.ir/~aamini/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. Arash Amini</a>
+          <span style="opacity: 0.4">| Feb 2020 - Present</span>
+          <p>By utilizing Video Processing and Image Processing methods to extract features and deploying Deep Neural Networks, We are working on :</p>
+          <p>
+            <ul>
+              <li>Distinguishing upscaled videos from original videos for every possible resolution</li>
+              <li>Detecting the rate of upscaling</li>
+              <li>Detecting the software used to upscale the video</li>
+              <li>Developing a Generative Adversarial Network (GAN) to upscale original videos</li>
+              <li>And more to come ...</li>
+            </ul>
+          </p>
+        </li>
+        <hr>
+        <li>
+          <p><b><span>Secure Communications and Machine Learning Lab</span> | University of Tehran</b></p>
+          <span style="opacity: 0.4">Research Intern Supervised by </span>
+          <a href="https://ece.ut.ac.ir/en/~akhaee" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. Mohammad Ali Akhaee</a>
+          <span style="opacity: 0.4">| Jul 2019 - Sep 2019</span>
+          <p>After learning basic concepts of Deep Learning, I worked on:</p>
+          <p>
+            <ul>
+              <li>Developing a Convolutional Neural Network for classification task on <a href="https://quickdraw.withgoogle.com/" target="_blank" class="w3-hover-text-blue" style="text-decoration: none;">Google ”Quick, Draw!”</a> huge data-set</li>
+              <li>Real-time painting classification by designing a software application like <a href="https://quickdraw.withgoogle.com/" target="_blank" class="w3-hover-text-blue" style="text-decoration: none;">Google ”Quick, Draw!”</a></li>
+            </ul>
+          </p>
+        </li>
+      </ul>
+    <hr>
   </div> 
+
+  <div class="w3-container" id="SP"> 
+    <div class="w3-panel w3-leftbar w3-border-blue w3-opacity">
+      <h2 class="w3-text-blue">SELECTED PROJECTS</h2>
+    </div>
+      <ul>
+        <p><li>Design and implementation of Deep Learning models for Image Captioning task on COCO data-set, using Transfer Learning and Data Augmentation for training CNN model to extract features (while reaching 97.3% accuracy on test data-set), using pre-trained CBOW model for Word Embeddings, using Attention Layer and Bidirectional LSTM for training RNN model to generate captions.</li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://ee.sharif.edu/~fatemizadeh/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. E. Fatemizadeh</a>
+        <span style="opacity: 0.4">| Fall 2019</span></p>
+        <p><li>Implementation of LSTM-Based Seq2Seq Encoder-Decoder and Skip-Gram models on a persian text data-set called ’Shahname Ferdowsi’.</li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://ee.sharif.edu/~fatemizadeh/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. E. Fatemizadeh</a>
+        <span style="opacity: 0.4">| Fall 2019</span></p>
+        <p><li>Analysing ”Titanic” data-set and extract useful features by Data Analysis techniques as well as implementation and optimization of Logistic Regression, K-NN, SVM, Naive Bayes Classifier, Random Forest and Neural Network methods on the analysed data-set to achieve highest possible accuracy on classification task, reaching 92% test accuracy, graded as the best work of the course.</li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://sina.sharif.ir/~saleh/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. S. Saleh Kaleybar</a>
+        <span style="opacity: 0.4">| Fall 2019</span></p>
+        <p><li>Implementation of K-NN classification algorithm using CUDA on a GPU, which was capable of classifying huge data-sets of up to 2<sup>30</sup> samples efficiently and fast.</li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://sharif.edu/~matin/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. M. Hashemi</a>
+        <span style="opacity: 0.4">| Spring 2019</span></p>
+        <p><li>Implementation of Wireless LAN Physical Layer (PHY) standard both in transmitter and receiver ends on FPGA.</li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://www.sina.sharif.edu/~mahdi/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. M. Shabany</a>
+        <span style="opacity: 0.4">| Spring 2020</span></p>
+      </ul>
+    <hr>
+  </div>
+
+  <div class="w3-container" id="TE"> 
+    <div class="w3-panel w3-leftbar w3-border-blue w3-opacity">
+      <h2 class="w3-text-blue">TEACHING EXPERIENCES</h2>
+    </div>
+      <ul>
+        <p><li>Pulse Technique and Digital Circuits | Homework grading </li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://ee.sharif.edu/~bagheri-s/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. S. Bagheri Shouraki</a>
+        <span style="opacity: 0.4">| Spring 2020</span></p>
+        <p><li>Computer Architecture and Microprocessors | Lab assistant</li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://ee.sharif.edu/~bagheri-s/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. S. Bagheri Shouraki</a>
+        <span style="opacity: 0.4">| Fall 2019</span></p>
+        <p><li>Computer Architecture and Microprocessors | Lab assistant</li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://sharif.edu/~matin/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. M. Hashemi</a>
+        <span style="opacity: 0.4">| Spring 2019</span></p>
+        <p><li>Signals and Systems | Holding Tutorial Class on MATLAB</li>
+        <span style="opacity: 0.4">Supervised by </span>
+        <a href="http://ee.sharif.edu/~behroozi/" target="_blank" class="w3-hover-text-blue" style="opacity: 0.4; text-decoration: none;">Prof. H. Behroozi</a>
+        <span style="opacity: 0.4">| Spring 2019</span></p>
+      </ul>
+  </div>
+
+  <div class="w3-container w3-blue w3-opacity">
+    <p>Armin Shafiee - Last Updated: 8-August-2020</p>
+  </div>
+
 
 </div>
 
