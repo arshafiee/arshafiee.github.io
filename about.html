@@ -4,6 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.mySlides {
+  display:none;
+  height: 250px;
+}
+</style>
 <body>
 
 <script>
@@ -13,6 +19,32 @@ function w3_open() {
 
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
+}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
 }
 </script>
 
@@ -39,20 +71,51 @@ function w3_close() {
 
 <div class="w3-main" style="margin-left: 250px; font-size: 16px; font-family: Georgia,serif;">
 
+  <button class="w3-button w3-hide-large w3-right w3-hover-lime w3-hover-text-blue" onclick="w3_open()">&#9776;</button>
+
+  <div class="w3-container w3-center">
+    <img src="real.png" class="w3-grayscale-max w3-opacity" style="width: 300px; height: 400px;">
+  </div>
+  
+  
+  <div class="w3-container">
+    <h1 class="w3-text-blue w3-jumbo">Welcome.</h1>
+    <p>My name is Armin Shafiee Sarvestani and I am an undergraduate student of Electrical Engineering at the <a href="http://www.sharif.ir/web/en/" target="_blank" class="w3-hover-text-blue" style="text-decoration: none;">Sharif University of Technology.</a> I'm interested in Deep Learning and Machine Learning and their applications in video and image processing. I enjoy working with different data-sets of videos and images as well as designing and implementing different Deep Learning and Machine Learnin algorithms. I also love entering new fields of AI and Computer Vision as I see their unlimited and fascinating applications in our modern world.</p>
+    <p>As I have worked with different programming languages and frameworks, I find myself a fast learner who easily learns whatever he is eager to. I have some useful experiences in the fields I mentioned before and I have gained various skills along this way. you can see a complete record of my skills and works in my <a href="" target="_blank" class="w3-text-blue" style="text-decoration: none; pointer-events: none;">CV</a>.</p>
+    <hr>
+  </div>
   
 
-  <div class="w3-row" style="margin-bottom: 50px;">
-    <div class="w3-bar w3-card-2 w3-blue">
-      <button class="w3-button w3-hide-large w3-right w3-hover-lime w3-hover-text-blue" onclick="w3_open()">&#9776;</button>
-      <a href="#TOP" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Top</a>
-      <a href="#RI" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Research Interests</a>
-      <a href="#EDUCATION" class="w3-bar-item w3-button w3-hover-lime w3-hover-text-blue">Education</a> 
+  <div class="w3-container" id="TE"> 
+    <div class="w3-panel w3-leftbar w3-border-blue w3-opacity">
+      <h2 class="w3-text-blue">Hobbies</h2>
     </div>
+      <ul>
+        <p><li>I love playing and watching football and I am a huge fan of REAL MADRID never missing matches of the team. Here are some special and unforgettable moments for me that I like to share.</li></p>
+        <div class="w3-content w3-display-container w3-card-4" style="width: 400px;">
+          <img class="mySlides" src="reyes.jpg" style="width:100%; display: block;">
+          <img class="mySlides" src="raul.jpg" style="width:100%">
+          <img class="mySlides" src="ronaldo.jpg" style="width:100%">
+          <img class="mySlides" src="ramos.jpg" style="width:100%">
+          <img class="mySlides" src="ladecima2.jpg" style="width:100%">
+          <img class="mySlides" src="casillas.jpg" style="width:100%">
+          <img class="mySlides" src="13.jpg" style="width:100%">
+          <img class="mySlides" src="zidane.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <hr>
+        <p><li>I enjoy watching movies and series. "Friends" series is the one I can't stop watching over and over again.</li></p>
+        <hr>
+        <p><li>I also like learning about psychology and the way my mind works.</li></p>
+      </ul>
   </div>
 
-  <div class="w3-container w3-blue w3-center">
-    <h3>Under Construction</h3>
-  </div> 
+  <div class="w3-container w3-blue w3-opacity">
+    <p>Armin Shafiee - Last Updated: 9-August-2020</p>
+  </div>
+  
 
 </div>
 
